@@ -3,11 +3,11 @@ using WRApiNasa.Models;
 
 namespace WRApiNasa.Services
 {
-    public class ApodService
+    public class WRApodService
     {
-        public async Task<Apod> GetImage(DateTime dt)
+        public async Task<WRApod> GetImage(DateTime dt)
         {
-            Apod dto = null;
+            WRApod dto = null;
             HttpResponseMessage response;
             string requestUrl = $"https://api.nasa.gov/planetary/apod?date={dt.ToString("yyyy-MM-dd")}&api_key=vzemV2BKM7LT9MHLd50MoGFUY4A8Y0yaOcm5w2UA\r\n";
             try
@@ -18,7 +18,7 @@ namespace WRApiNasa.Services
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     string json = await response.Content.ReadAsStringAsync();
-                    dto = JsonConvert.DeserializeObject<Apod>(json);
+                    dto = JsonConvert.DeserializeObject<WRApod>(json);
                 }
             }
             catch (Exception ex)

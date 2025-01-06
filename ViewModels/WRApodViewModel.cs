@@ -10,7 +10,7 @@ using WRApiNasa.Services;
 
 namespace WRApiNasa.ViewModels
 {
-    public class ApodViewModel : INotifyPropertyChanged
+    public class WRApodViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
@@ -20,7 +20,7 @@ namespace WRApiNasa.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        public ApodViewModel()
+        public WRApodViewModel()
         {
             ChosenDate = DateTime.Now;
         }
@@ -84,21 +84,21 @@ namespace WRApiNasa.ViewModels
                 }
             }
         }
-        private ApodService service;
-        public ApodService Service
+        private WRApodService service;
+        public WRApodService Service
         {
             get
             {
                 if (service == null)
                 {
-                    service = new ApodService();
+                    service = new WRApodService();
                 }
                 return service;
             }
         }
         private async Task GetPictureOfTheDay(DateTime day)
         {
-            Apod dto = await Service.GetImage(day);
+            WRApod dto = await Service.GetImage(day);
             if (dto == null)
             {
                 ImageURI = new Uri("https://image.freepik.com/vector-gratis/error-404-no-encontradoefecto-falla_8024-5.jpg");

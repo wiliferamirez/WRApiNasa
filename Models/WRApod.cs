@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WRApiNasa.Models
 {
-    public class Apod
+    public class WRApod
     {
         public string date { get; set; }
         public string explanation { get; set; }
