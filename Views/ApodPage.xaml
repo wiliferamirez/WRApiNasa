@@ -7,24 +7,24 @@
         <!-- Place new controls here -->
         <Frame BackgroundColor="DarkSlateGray">
             <Label Text="Imagen del día"
- HorizontalOptions="Center"
- VerticalOptions="Start"
- TextColor="White"
- FontSize="Large"/>
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    TextColor="White"
+                    FontSize="Large"/>
         </Frame>
         <Label Text="Seleccione la fecha:" FontSize="Small" HorizontalOptions="Center"
-TextColor="GhostWhite"/>
+TextColor="Black"/>
         <DatePicker x:Name="ImageDate"
  Date="{Binding ChosenDate}"
  HorizontalOptions="CenterAndExpand"
- TextColor="GhostWhite"/>
+ TextColor="Black"/>
         <Label x:Name="Title"
  Text="{Binding Title}"
  FontSize="Medium"
  FontAttributes="Bold"
  HorizontalTextAlignment="Center"
  HorizontalOptions="CenterAndExpand"
- TextColor="GhostWhite"/>
+ TextColor="Black"/>
         <ScrollView VerticalOptions="StartAndExpand">
             <StackLayout Margin="40,15,40,50">
                 <Image x:Name="Picture"
@@ -34,7 +34,7 @@ TextColor="GhostWhite"/>
                 <Label x:Name="Didactic"
  Text="{Binding Didactic}"
  HorizontalOptions="FillAndExpand"
- TextColor="GhostWhite"
+ TextColor="Black"
  Padding="5, 20, 5, 20"
  FontFamily="verdana"/>
             </StackLayout>

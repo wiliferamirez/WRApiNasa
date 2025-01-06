@@ -10,7 +10,7 @@ using WRApiNasa.Services;
 
 namespace WRApiNasa.ViewModels
 {
-    internal class ApodViewModel : INotifyPropertyChanged
+    public class ApodViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")

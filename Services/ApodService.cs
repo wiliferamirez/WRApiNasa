@@ -1,20 +1,15 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WRApiNasa.Models;
 
 namespace WRApiNasa.Services
 {
-    internal class ApodService
+    public class ApodService
     {
         public async Task<Apod> GetImage(DateTime dt)
         {
             Apod dto = null;
             HttpResponseMessage response;
-            string requestUrl = $"https://api.nasa.gov/planetary/apod?date={dt.ToString("2024-0106")}&api_key=vzemV2BKM7LT9MHLd50MoGFUY4A8Y0yaOcm5w2UA";
+            string requestUrl = $"https://api.nasa.gov/planetary/apod?date={dt.ToString("yyyy-MM-dd")}&api_key=vzemV2BKM7LT9MHLd50MoGFUY4A8Y0yaOcm5w2UA\r\n";
             try
             {
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
